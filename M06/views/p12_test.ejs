@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>這個頁面是p12</h1>
+    <hr>
+    <!-- EJS還是會處理 => 因為檢查的時候有看見蠟筆小新四個字 -->
+    <!-- <p> <%= title %> </p> -->
+    <!-- EJS還是不會處理 => 因為有 <%# %> -->
+    <!-- <p> <%# title %> </p> -->
+    <hr>
+    <hr>
+    <% if(title=='皮卡丘' ){ %>
+        <p>我是皮卡丘</p>
+        <% }else{ %>
+            <p>我不是皮卡丘，我是<%= title %>
+            </p>
+            <% } %>
+                <hr>
+                <ul>
+                    <% for(let i=0; i<items.length; i++){ %>
+                        <li>
+                            <%= items[i] %>
+                        </li>
+                        <% } %>
+                </ul>
+</body>
+
+</html>

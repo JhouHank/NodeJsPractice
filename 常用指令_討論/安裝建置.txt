@@ -1,0 +1,6 @@
+npm init -y
+npm install express
+npm install ejs
+
+npm list 套件名稱        列單一套件
+npm list -s --depth=1   列全部套件

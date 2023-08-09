@@ -1,0 +1,35 @@
+URL組成 => 通訊協定://主機:埠號/路徑?資源查詢
+
+    HTML        CSS          JavaScript      jQuery      jQuery官方文件     Node.js
+[]          選擇標籤屬性        陣列            陣列        可有可無
+------------------------------------
+express()
+express.Router()    Lab0804
+express.static()    M05 P07    伺服器提供靜態檔案位置出去給使用者
+------------------------------------
+res.writeHead()     M03 P18
+res.write()         M03 P18
+res.end()           M03 P18
+res.send()          M04 P15
+res.json()          M04 P21
+res.sendFile()      Lab0807
+res.render()        Lab0807_EJS
+res.redirect(路由)  M11 
+------------------------------------
+req.app.get()       M07 P18 (PDF沒有，課堂上延伸)
+req.query           承接、裝載 URL問號後面的資料(M07 P16、M08)
+req.body            承接、裝載 網頁表單方法為POST裡面的input的name跟value
+                    => 需要body-parser輔助解碼，不然看不到(M07 P16、M08 P5)
+req.file            M08 P18 取得使用者上傳的檔案
+                            => 要搭配multer
+req.params          M09 P5  擷取URL上面的資訊
+                            => 要搭配冒號(:) 有限定位置
+------------------------------------
+app.use('/', router)                    M4 P20
+app.use('/' ?, express.static(路徑))    M5 P7
+app.use(bodyparser.json())              M7 P15
+app.use(bodyparser.urlencoded()) 
+app.use(f(){自己寫的})                  M10 P16
+app.use(session)                        M11 P9
+
+

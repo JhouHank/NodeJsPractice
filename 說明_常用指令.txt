@@ -1,0 +1,40 @@
+1. 稍後會依照 「20_PDF」 資料夾底下的PDF檔案進行說明
+
+    ※ 這一份教材由資策會底下的講師在2020-2021年共同編撰
+
+    ※ 2021/09/01 資策會數位教育研究所轉變為iSpan資展國際正式成立
+
+
+2. 預計的操作方式：
+
+    ※ 建議在 C:\Lab 資料夾底下，根據當前討論的PDF檔案建立對應的資料夾
+       若討論 「Module_01_安裝Nodejs.pdf」
+       則建立 M01 或者 Module01 資料夾
+
+-------------------------------------------
+cd 資料夾名稱          => 切換資料夾                   => 超級！
+cls                   => 清除                         => 超級！
+node 檔案路徑(相對)    => 當前執行的位置                => 超級！
+node 檔案路徑(絕對)    => C:\...                      => 不會再出現
+npm init              => 初始化專案資料夾             => 上課至少18次，大專一次
+npm install 套件名稱  => 記得執行的地方是專案資料夾底下 => 上課很頻繁，大專不會
+
+-------------------------------------------
+npm init -y
+npm install express
+npm install ejs
+npm install multer
+
+
+-------------------------------------------
+let express = require('express');
+let app = express();
+
+app.get('/',function(req,res){
+    res.send(' ');
+});
+
+
+app.listen(2407, function () {
+    console.log('原神！啟動！時間：' + new Date().toLocaleTimeString())
+});

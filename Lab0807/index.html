@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!--  ↓　請根據自己的資料夾規劃和設定，引入靜態檔案 -->
+    <link rel="stylesheet" href="http://localhost:2407/css/bootstrap.css">
+    <script src="js/jquery-3.6.0.js"></script>
+    <!--  ↑　請根據自己的資料夾規劃和設定，引入靜態檔案 -->
+</head>
+
+<body>
+    <button class="btn btn-success m-2">測試Node.js引用檔案</button>
+    <p class="bg-warning">皮卡丘</p>
+    <hr>
+    <img src="http://localhost:2407/find.png" />
+    <script>
+        $('button').click(function () {
+            $('p').text('可達鴨');
+        })
+    </script>
+</body>
+
+</html>
