@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>app2</title>
+    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+</head>
+
+<body>
+    <h3>討論CORS</h3>
+    <hr>
+    <p id="result"></p>
+    <script>
+        // 去伺服器「拿」資料
+        // 伺服器 : http://localhost:2407/time777
+        // 拿資料 : GET
+        // 拿到的資料在哪裡?
+        $.ajax({
+            // url: "http://localhost:2407/time777",
+            url: "http://localhost:8888/say",
+            method: "GET",
+            success: function (data) {
+                // console.log(data);
+                $('#result').text(data);
+            }
+        })
+    </script>
+</body>
+
+</html>

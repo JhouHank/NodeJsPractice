@@ -12,13 +12,14 @@ app.use('/css',express.static('css'))
 // 這裡是資料庫相關 和M12 P12相同
 let mysql = require('mysql');
 let myDBconn = mysql.createConnection({
-    host : "localhost", // "127.0.0.1"
+    host : "localhost", // 或是"127.0.0.1"
     port : "3306", // 預設3306 可以不用打
     user : "root",
     password : "root",
     database : "mask"
 })
 
+// 因為想要查看錯誤訊息
 myDBconn.connect(function(err){
     if(err){
         console.log("資料庫有問題===========");

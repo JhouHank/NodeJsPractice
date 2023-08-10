@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./jquery-3.6.0.js"></script>
+</head>
+
+<body>
+    <button>測試</button>
+    <hr>
+    <form id="apple" action="">
+        <label for="in1">第一格</label>
+        <input type="text" id="in1" name="bee">
+        <label for="in2">第二格</label>
+        <input type="text" id="in2" name="cat">
+        <label for="in3">第三格</label>
+        <input type="text" id="in3" name="dog">
+    </form>
+    <script>
+        $('button').on('click', function () {
+            var y = $('#apple').serializeArray();
+            // console.log(y);
+            // y是一個陣列
+
+            // 給serializeToJSON一個陣列，
+            // serializeToJSON會回傳一個字串
+            let x = serializeToJSON(y);
+            console.log(typeof x);
+            console.log(x);
+        })
+        // 自己寫的 把陣列轉物件
+        function serializeToJSON(zoo) {
+            var values = {};
+            for (index in zoo) {
+                // console.log(index); // 0 1 2
+                // console.log(data[index].value); //屬性值
+                // console.log( values[ data[index].name ] ) 
+                // ↑ 物件不只可以用點去存取值，也可以用中括號
+                values[zoo[index].name] = zoo[index].value;
+            }
+            // 回傳的時候，再把物件轉字串
+            return JSON.stringify(values)
+        }
+    </script>
+</body>
+
+</html>
