@@ -6,7 +6,7 @@ dog.get('/',function(req,res){
 })
 
 dog.get('/detail',function(req,res){
-    res.send('<h1>這是detail頁</h1>');
+    res.send('<h1>這是product/detail頁</h1>');
 })
 
 module.exports = dog;

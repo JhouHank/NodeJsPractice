@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <%- include('./share/head') %>
+</head>
+
+<body>
+    <h3>皮卡丘</h3>
+    <div>
+        <%- include('./share/footer') %>
+    </div>
+    <br>
+    <br>
+    <div>
+        <%- test %>
+    </div>
+    <!-- <%-  %> -->
+    <!-- 上面這種與innerHTML一樣，會把變數的值塞進來並且當作保留字元，如果值有包含html語法就可以正常顯示 -->
+    <!-- <%=  %> -->
+    <!-- 上面這種與innerText一樣，會把變數的值變成字串塞進來 -->
+    <!-- <%   %> -->
+    <!-- 上面這種則是將標籤內的內容，當作程式邏輯來使用 -->
+</body>
+
+</html>
